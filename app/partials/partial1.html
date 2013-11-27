@@ -1,5 +1,64 @@
-<input type="button" ng-click="getLocation()" value="get!" />
-<br />
-<label>{{Lon}}</label>
-<br />
-<label>{{Lat}}</label>
+<div class="header">
+	<label>{{Lon}}</label>
+	<br />
+	<label>{{Lat}}</label>
+	<div class="refresh">
+		<input type="button" ng-click="getLocation()" value="{{Refresh|i18n}}" />
+	</div>
+</div>
+<div class="today">
+	<div class="advice">
+		Time to wash your car!
+	</div>
+	<div class="describe">
+		<div class="city">
+			Kharkiv
+		</div>
+		<div class="weekday">
+			Mon,
+		</div>
+		<div class="date">
+			11-Nov
+		</div>
+		
+	</div>
+	<div class="weather">
+		
+		<div class="picture">
+			<img src="http://openweathermap.org/img/w/10d.png">
+		</div>
+		<div class="temp">
+			8
+		</div>
+	</div>
+</div>
+<div class="border"></div>
+<div class="nextdays">
+	<div class="advice">
+	    Next convenient time to wash:
+	</div>
+	<div class="day">
+		<div class="border"></div>
+		<div class="describe">
+			<div class="weekday">
+				Mon,
+			</div>
+			<div class="date">
+				11-Nov
+			</div>
+		</div>
+		<div class="weather">
+			<div class="picture">
+				<img src="http://openweathermap.org/img/w/10d.png">
+			</div>
+			<div class="temp">
+				8
+			</div>
+		</div>
+		<div class="border"></div>
+	</div>
+</div>
+
+
+
+

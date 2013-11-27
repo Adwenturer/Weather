@@ -6,15 +6,8 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
+  <div  class="wrapper" ng-view></div>
+ 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
@@ -25,5 +18,24 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+
+  <script type="text/javascript">
+
+    function loadLocaleFile(filename, filetype){
+     if (filetype=="js"){ //if filename is a external JavaScript file
+      var fileref=document.createElement('script')
+      fileref.setAttribute("type","text/javascript")
+      fileref.setAttribute("src", filename)
+     }
+     if (typeof fileref!="undefined")
+      document.getElementsByTagName("head")[0].appendChild(fileref)
+    }  
+
+                    var userLang = navigator.language || navigator.userLanguage; 
+                console.log("The language is: " + userLang);
+
+                //Load localization
+                loadLocaleFile("lib/Angular/i18n/" + userLang + ".js", "js");
+  </script>
 </body>
 </html>
